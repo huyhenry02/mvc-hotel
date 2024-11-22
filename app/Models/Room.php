@@ -11,7 +11,8 @@ class Room extends Model
     protected $table = 'rooms';
     protected $fillable = [
         'room_type_id',
-        'description',
+        'floor',
+        'code',
     ];
 
     public function roomType(): BelongsTo

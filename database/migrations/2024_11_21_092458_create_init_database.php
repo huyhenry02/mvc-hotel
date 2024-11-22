@@ -14,14 +14,16 @@ return new class extends Migration
         Schema::create('room_types', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
+            $table->integer('price');
             $table->text('description')->nullable();
             $table->timestamps();
         });
 
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
+            $table->string('code', 100)->nullable();
             $table->foreignId('room_type_id')->constrained('room_types')->onDelete('cascade');
-            $table->text('description')->nullable();
+            $table->integer('floor');
             $table->timestamps();
         });
 

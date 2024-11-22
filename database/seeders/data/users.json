@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "full_name": "Admin Hotel",
+        "address": "Hanoi",
+        "phone": "01111111111",
+        "role_type": "admin",
+        "email": "admin@gmail.com",
+        "password": "1"
+    },
+    {
+        "id": 2,
+        "full_name": "Nguyen Van A",
+        "address": "Ho Chi Minh City",
+        "phone": "01234567890",
+        "role_type": "customer",
+        "email": "nguyenvana@example.com",
+        "password": "1"
+    },
+    {
+        "id": 3,
+        "full_name": "Tran Thi B",
+        "address": "Da Nang",
+        "phone": "09876543210",
+        "role_type": "customer",
+        "email": "tranthib@example.com",
+        "password": "1"
+    },
+    {
+        "id": 4,
+        "full_name": "Le Van C",
+        "address": "Hai Phong",
+        "phone": "09345678901",
+        "role_type": "customer",
+        "email": "levanc@example.com",
+        "password": "1"
+    },
+    {
+        "id": 5,
+        "full_name": "Pham Thi D",
+        "address": "Can Tho",
+        "phone": "09123456789",
+        "role_type": "customer",
+        "email": "phamthid@example.com",
+        "password": "1"
+    },
+    {
+        "id": 6,
+        "full_name": "Hoang Minh E",
+        "address": "Hue",
+        "phone": "09456789012",
+        "role_type": "customer",
+        "email": "hoangminhe@example.com",
+        "password": "1"
+    }
+]

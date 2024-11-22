@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Phòng Tiêu Chuẩn",
+        "price": 1000000,
+        "description": "Phòng tiêu chuẩn dành cho 2 người, trang bị cơ bản và không gian ấm cúng."
+    },
+    {
+        "id": 2,
+        "name": "Phòng Superior",
+        "price": 2000000,
+        "description": "Phòng cao cấp hơn tiêu chuẩn, có thêm không gian và tiện nghi hiện đại."
+    },
+    {
+        "id": 3,
+        "name": "Phòng Deluxe",
+        "price": 3000000,
+        "description": "Phòng sang trọng với view đẹp, đầy đủ tiện nghi cao cấp."
+    },
+    {
+        "id": 4,
+        "name": "Phòng Suite",
+        "price": 4000000,
+        "description": "Phòng hạng sang với không gian rộng rãi, bao gồm phòng khách và phòng ngủ riêng biệt."
+    },
+    {
+        "id": 5,
+        "name": "Phòng Gia Đình",
+        "price": 5000000,
+        "description": "Phòng rộng rãi, phù hợp cho gia đình với nhiều giường và không gian sinh hoạt."
+    },
+    {
+        "id": 6,
+        "name": "Phòng Tổng Thống",
+        "price": 6000000,
+        "description": "Phòng đẳng cấp nhất với không gian xa hoa, thiết kế hiện đại và dịch vụ đặc biệt."
+    }
+]
