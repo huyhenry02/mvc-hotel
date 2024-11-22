@@ -21,7 +21,6 @@ return new class extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('room_type_id')->constrained('room_types')->onDelete('cascade');
-            $table->integer('capacity');
             $table->text('description')->nullable();
             $table->timestamps();
         });
@@ -39,11 +38,11 @@ return new class extends Migration
         });
 
         Schema::create('transactions', function (Blueprint $table) {
-            $table->id('transaction_id');
+            $table->id();
             $table->foreignId('booking_id')->constrained('bookings')->onDelete('cascade');
             $table->enum('payment_method', ['credit_card', 'paypal', 'bank_transfer']);
             $table->dateTime('payment_date');
-            $table->decimal('amount', 10, 2);
+            $table->integer('amount');
             $table->enum('transaction_status', ['success', 'failed', 'pending'])->default('pending');
             $table->timestamps();
         });
