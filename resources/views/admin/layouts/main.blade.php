@@ -12,6 +12,7 @@
         href="/assets/img/kaiadmin/favicon.ico"
         type="image/x-icon"
     />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Fonts and icons -->
     <script src="/assets/js/plugin/webfont/webfont.min.js"></script>

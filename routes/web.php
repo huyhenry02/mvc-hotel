@@ -10,8 +10,8 @@ use App\Http\Controllers\RoomTypeController;
 use App\Http\Controllers\TransactionController;
 
 Route::get('/', function () {
-    return view('admin.booking.index');
-});
+    return view('admin.layouts.main');
+})->name('admin.layouts.main');
 
 Route::group([
     'prefix' => 'admin'
@@ -28,7 +28,10 @@ Route::group([
     ], function () {
         Route::get('/index', [RoomTypeController::class, 'showIndex'])->name('room_type.showIndex');
         Route::get('/create', [RoomTypeController::class, 'showCreate'])->name('room_type.showCreate');
-        Route::get('/update', [RoomTypeController::class, 'showUpdate'])->name('room_type.showUpdate');
+        Route::post('/', [RoomTypeController::class, 'showStore'])->name('room_type.showStore');
+        Route::get('/update/{room_type}', [RoomTypeController::class, 'showUpdate'])->name('room_type.showUpdate');
+        Route::post('/save/{room_type}', [RoomTypeController::class, 'showSave'])->name('room_type.showSave');
+        Route::get('/destroy/{room_type}', [RoomTypeController::class, 'destroy'])->name('room_type.destroy');
     });
     Route::group([
         'prefix' => 'booking'
@@ -60,7 +63,9 @@ Route::group([
     Route::get('/register', [AuthController::class, 'showRegister'])->name('customer.showRegister');
     Route::get('/index', [IndexController::class, 'showIndex'])->name('customer.showIndex');
     Route::get('/about', [IndexController::class, 'showAbout'])->name('customer.showAbout');
+    Route::get('/room', [IndexController::class, 'showRoom'])->name('customer.showRoom');
     Route::get('/contact', [IndexController::class, 'showContact'])->name('customer.showContact');
     Route::get('/service', [IndexController::class, 'showService'])->name('customer.showService');
     Route::get('/booking', [IndexController::class, 'showBooking'])->name('customer.showBooking');
+
 });

@@ -45,12 +45,19 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="" class="nav-item nav-link">Trang chủ</a>
-                        <a href="" class="nav-item nav-link">Về khách sạn</a>
-                        <a href="" class="nav-item nav-link">Dịch vụ</a>
-                        <a href="" class="nav-item nav-link">Phòng</a>
-                        <a href="" class="nav-item nav-link">Đặt phòng</a>
-                        <a href="" class="nav-item nav-link">Liên lạc</a>
+                        <a href="{{route('customer.showIndex')}}" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="{{route('customer.showRoom')}}" class="nav-item nav-link">Rooms</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="booking.html" class="dropdown-item">Booking</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a>
                 </div>

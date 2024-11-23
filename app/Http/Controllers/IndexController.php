@@ -18,6 +18,10 @@ class IndexController extends Controller
     {
         return view('customer.about');
     }
+    public function showRoom(): View|Factory|Application
+    {
+        return view('customer.room');
+    }
 
     public function showContact(): View|Factory|Application
     {
