@@ -10,7 +10,7 @@
 <div class="container-fluid bg-dark px-0">
     <div class="row gx-0">
         <div class="col-lg-3 bg-dark d-none d-lg-block">
-            <a href="{{route('customer.showIndex')}}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+            <a href="{{ route('customer.showIndex') }}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                 <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
             </a>
         </div>
@@ -45,13 +45,13 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="{{route('customer.showIndex')}}" class="nav-item nav-link active">Home</a>
-                        <a href="{{route('customer.showAbout')}}" class="nav-item nav-link">About</a>
-                        <a href="{{route('customer.showService')}}" class="nav-item nav-link">Services</a>
-                        <a href="{{route('customer.showRoom')}}" class="nav-item nav-link">Rooms</a>
-                        <a href="{{route('customer.showContact')}}" class="nav-item nav-link">Contact</a>
+                        <a href="{{route('customer.showIndex')}}" class="nav-item nav-link active">Trang chủ</a>
+                        <a href="{{route('customer.showAbout')}}" class="nav-item nav-link">Về chúng tôi</a>
+                        <a href="{{route('customer.showService')}}" class="nav-item nav-link">Dịch vụ</a>
+                        <a href="{{route('customer.showRoom')}}" class="nav-item nav-link">Phòng</a>
+                        <a href="{{route('customer.showBooking')}}" class="nav-item nav-link">Đặt phòng</a>
+                        <a href="{{route('customer.showContact')}}" class="nav-item nav-link">Liên lạc</a>
                     </div>
-                    <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a>
                 </div>
             </nav>
         </div>

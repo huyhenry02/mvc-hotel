@@ -27,8 +27,8 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="description" class="form-label">Mô Tả</label>
-                                <textarea name="description" id="description" class="form-control" rows="6" required>{{$room->description}}</textarea>
+                                <label for="floor" class="form-label">Tầng</label>
+                                <input type="number" name="floor" id="floor" placeholder="Tầng" class="form-control" value="{{ $room->floor ?? '' }}">
                             </div>
                             <div style="float: right">
                                 <button type="submit" class="btn btn-primary">Tạo mới</button>

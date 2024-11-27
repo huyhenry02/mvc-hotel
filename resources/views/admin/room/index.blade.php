@@ -18,17 +18,19 @@
                             <thead>
                             <tr class="text-center">
                                 <th class="d-none d-xl-table-cell">Stt</th>
+                                <th class="d-none d-xl-table-cell">Mã phòng</th>
                                 <th class="d-none d-xl-table-cell">Loại Phòng</th>
-                                <th class="d-none d-xl-table-cell">Mô Tả</th>
+                                <th class="d-none d-xl-table-cell">Tầng</th>
                                 <th class="d-none d-xl-table-cell">Chức Năng</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($rooms as $key => $room)
                                 <tr class="text-center">
-                                    <td class="d-none d-xl-table-cell">{{$key + 1}}</td>
-                                    <td class="d-none d-xl-table-cell">{{$room->roomType->name?? ''}}</td>
-                                    <td class="d-none d-xl-table-cell">{{$room->description}}</td>
+                                    <td class="d-none d-xl-table-cell">{{ $key + 1 }}</td>
+                                    <td class="d-none d-xl-table-cell">{{ $room->code ?? '' }}</td>
+                                    <td class="d-none d-xl-table-cell">{{ $room->roomType->name ?? '' }}</td>
+                                    <td class="d-none d-xl-table-cell">{{ $room->floor ?? '' }}</td>
                                     <td class="d-none d-xl-table-cell">
                                         <a href="{{route('room.showUpdate', $room->id)}}" class="btn btn-primary">
                                             <i class='bx bxs-edit'></i>

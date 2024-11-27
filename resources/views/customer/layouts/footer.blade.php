@@ -1,18 +1,13 @@
-<!-- Footer Start -->
+<!-- Phần Chân Trang Bắt Đầu -->
 <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
     <div class="container pb-5">
         <div class="row g-5">
-            <div class="col-md-6 col-lg-4">
-                <div class="bg-primary rounded p-4">
-                    <a href="index.html"><h1 class="text-white text-uppercase mb-3">Hotelier</h1></a>
-                    <p class="text-white mb-0">
-                        Download <a class="text-dark fw-medium" href="https://htmlcodex.com/hotel-html-template-pro">Hotelier – Premium Version</a>, build a professional website for your hotel business and grab the attention of new visitors upon your site’s launch.
-                    </p>
-                </div>
+            <div class="col-md-2 ">
+
             </div>
-            <div class="col-md-6 col-lg-3">
-                <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+            <div class="col-md-10">
+                <h6 class="section-title text-start text-primary text-uppercase mb-4">Liên Hệ</h6>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>PTIT</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                 <div class="d-flex pt-2">
@@ -25,24 +20,24 @@
             <div class="col-lg-5 col-md-12">
                 <div class="row gy-5 g-4">
                     <div class="col-md-6">
-                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                        <a class="btn btn-link" href="">Support</a>
+                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Về Chúng Tôi</h6>
+                        <a class="btn btn-link" href="#">Giới Thiệu</a>
+                        <a class="btn btn-link" href="#">Liên Hệ</a>
+                        <a class="btn btn-link" href="#">Chính Sách Bảo Mật</a>
+                        <a class="btn btn-link" href="#">Điều Khoản Sử Dụng</a>
+                        <a class="btn btn-link" href="#">Hỗ Trợ</a>
                     </div>
                     <div class="col-md-6">
-                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                        <a class="btn btn-link" href="">Food & Restaurant</a>
-                        <a class="btn btn-link" href="">Spa & Fitness</a>
-                        <a class="btn btn-link" href="">Sports & Gaming</a>
-                        <a class="btn btn-link" href="">Event & Party</a>
-                        <a class="btn btn-link" href="">GYM & Yoga</a>
+                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Dịch Vụ</h6>
+                        <a class="btn btn-link" href="#">Ẩm Thực & Nhà Hàng</a>
+                        <a class="btn btn-link" href="#">Spa & Thể Hình</a>
+                        <a class="btn btn-link" href="#">Thể Thao & Trò Chơi</a>
+                        <a class="btn btn-link" href="#">Sự Kiện & Tiệc</a>
+                        <a class="btn btn-link" href="#">Gym & Yoga</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Footer End -->
+<!-- Phần Chân Trang Kết Thúc -->

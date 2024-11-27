@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Admin Daily care</title>
+    <title>Trang quản lý</title>
     <meta
         content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
         name="viewport"
@@ -45,10 +45,10 @@
 <body>
 <div class="wrapper">
     <!-- Sidebar -->
-    <div class="sidebar" data-background-color="blue">
+    <div class="sidebar">
         <div class="sidebar-logo">
             <!-- Logo Header -->
-            <div class="logo-header" data-background-color="blue">
+            <div class="logo-header">
                 <a href="#" class="logo">
 
                 </a>

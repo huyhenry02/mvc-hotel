@@ -17,7 +17,7 @@
                             <div class="mb-3">
                                 <label for="room_type_id" class="form-label">Loại Phòng</label>
                                 <select name="room_type_id" id="room_type_id" class="form-select" required>
-                                    <option value="" disabled selected>Select a Room Type</option>
+                                    <option value="" disabled selected>Chọn loại phòng</option>
                                     @foreach($roomtypes as $room_type)
                                         <option value="{{ $room_type->id }}">{{ $room_type->name }}</option>
                                     @endforeach
@@ -25,8 +25,8 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="description" class="form-label">Mô Tả</label>
-                                <textarea name="description" id="description" class="form-control" rows="6" required></textarea>
+                                <label for="floor" class="form-label">Tầng</label>
+                                <input type="number" name="floor" id="floor" placeholder="Tầng" class="form-control">
                             </div>
                             <div style="float: right">
                                 <button type="submit" class="btn btn-primary">Tạo mới</button>

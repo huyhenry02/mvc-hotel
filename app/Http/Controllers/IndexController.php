@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\RoomType;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Contracts\View\Factory;
@@ -20,7 +21,10 @@ class IndexController extends Controller
     }
     public function showRoom(): View|Factory|Application
     {
-        return view('customer.room');
+        $roomTypes = RoomType::all();
+        return view('customer.room'
+            , ['roomTypes' => $roomTypes]
+        );
     }
 
     public function showContact(): View|Factory|Application
