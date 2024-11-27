@@ -16,13 +16,19 @@ class Booking extends Model
         self::STATUS_PAID => "Đã Thanh Toán"
     ];
     protected $fillable = [
+        'name_booking',
+        'email_booking',
         'user_id',
         'room_id',
+        'room_type_id',
+        'adult_people_number',
+        'child_people_number',
         'check_in_date',
         'check_out_date',
         'total_price',
+        'status',
+        'note',
         'payment_status',
-        'email_confirmed',
     ];
 
     public function user(): BelongsTo
@@ -33,6 +39,11 @@ class Booking extends Model
     public function room(): BelongsTo
     {
         return $this->belongsTo(Room::class);
+    }
+
+    public function roomType(): BelongsTo
+    {
+        return $this->belongsTo(RoomType::class);
     }
 
     public function transaction(): HasOne

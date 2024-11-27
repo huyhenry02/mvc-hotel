@@ -24,6 +24,10 @@
     <link href="/customer/lib/animate/animate.min.css" rel="stylesheet">
     <link href="/customer/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="/customer/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <!-- Tempus Dominus CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus/dist/css/tempus-dominus.min.css" rel="stylesheet" />
+    <!-- Tempus Dominus JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus/dist/js/tempus-dominus.min.js"></script>
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="/customer/css/bootstrap.min.css" rel="stylesheet">

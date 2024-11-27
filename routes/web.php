@@ -41,7 +41,9 @@ Route::group([
     ], function () {
         Route::get('/index', [BookingController::class, 'showIndex'])->name('booking.showIndex');
         Route::get('/create', [BookingController::class, 'showCreate'])->name('booking.showCreate');
-        Route::get('/update', [BookingController::class, 'showUpdate'])->name('booking.showUpdate');
+        Route::get('/update/{booking}', [BookingController::class, 'showUpdate'])->name('booking.showUpdate');
+
+        Route::post('/update/{booking}', [BookingController::class, 'postUpdate'])->name('booking.postUpdate');
     });
     Route::group([
         'prefix' => 'transaction'
@@ -69,6 +71,12 @@ Route::group([
     Route::get('/room', [IndexController::class, 'showRoom'])->name('customer.showRoom');
     Route::get('/contact', [IndexController::class, 'showContact'])->name('customer.showContact');
     Route::get('/service', [IndexController::class, 'showService'])->name('customer.showService');
-    Route::get('/booking', [IndexController::class, 'showBooking'])->name('customer.showBooking');
+    Route::get('/booking', [IndexController::class, 'showBooking'])->name('customer.showBooking')->middleware('auth');
+    Route::get('/your-booking', [IndexController::class, 'showYourBooking'])->name('customer.showYourBooking')->middleware('auth');
 
+    Route::post('/register', [AuthController::class, 'postRegister'])->name('customer.postRegister');
+    Route::post('/login', [AuthController::class, 'postLogin'])->name('customer.postLogin');
+    Route::get('/logout', [AuthController::class, 'postLogout'])->name('customer.postLogout');
+
+    Route::post('/booking', [IndexController::class, 'postBooking'])->name('customer.postBooking')->middleware('auth');
 });

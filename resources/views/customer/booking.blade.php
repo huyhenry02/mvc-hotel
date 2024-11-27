@@ -5,72 +5,23 @@
         <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Booking</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Đặt phòng</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Booking</li>
+                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Đặt phòng</li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
         <!-- Page Header End -->
-
-
-        <!-- Booking Start -->
-        <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="bg-white shadow" style="padding: 35px;">
-                    <div class="row g-2">
-                        <div class="col-md-10">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                               placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Adult</option>
-                                        <option value="1">Adult 1</option>
-                                        <option value="2">Adult 2</option>
-                                        <option value="3">Adult 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Child</option>
-                                        <option value="1">Child 1</option>
-                                        <option value="2">Child 2</option>
-                                        <option value="3">Child 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Booking End -->
-
-
         <!-- Booking Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Room Booking</h6>
-                    <h1 class="mb-5">Book A <span class="text-primary text-uppercase">Luxury Room</span></h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">Đặt phòng</h6>
+                    <h1 class="mb-5">Hãy chọn  <span class="text-primary text-uppercase">phòng hợp lý</span></h1>
                 </div>
                 <div class="row g-5">
                     <div class="col-lg-6">
@@ -91,70 +42,63 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
+                            <form action="{{ route('customer.postBooking') }}" method="post">
+                                @csrf
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                            <label for="name">Your Name</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Tên của bạn" name="name_booking">
+                                            <label for="name">Tên của bạn</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                            <label for="email">Your Email</label>
+                                            <input type="email" class="form-control" id="email_booking" placeholder="Email của bạn" name="email_booking">
+                                            <label for="email_booking">Email của bạn</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-floating date" id="date3" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" id="checkin" placeholder="Check In" data-target="#date3" data-toggle="datetimepicker" />
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control datetimepicker-input" id="checkin" name="check_in_date" placeholder="Check In" />
                                             <label for="checkin">Check In</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-floating date" id="date4" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" id="checkout" placeholder="Check Out" data-target="#date4" data-toggle="datetimepicker" />
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control datetimepicker-input" id="checkout" name="check_out_date" placeholder="Check Out" />
                                             <label for="checkout">Check Out</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select1">
-                                                <option value="1">Adult 1</option>
-                                                <option value="2">Adult 2</option>
-                                                <option value="3">Adult 3</option>
-                                            </select>
-                                            <label for="select1">Select Adult</label>
+                                            <input type="number" class="form-control" id="adult_people_number" placeholder="Số lượng người lớn" name="adult_people_number">
+                                            <label for="adult_people_number">Số lượng người lớn</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select2">
-                                                <option value="1">Child 1</option>
-                                                <option value="2">Child 2</option>
-                                                <option value="3">Child 3</option>
-                                            </select>
-                                            <label for="select2">Select Child</label>
+                                            <input type="number" class="form-control" id="child_people_number" placeholder="Số lượng trẻ em" name="child_people_number">
+                                            <label for="child_people_number">Số lượng trẻ em</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select3">
-                                                <option value="1">Room 1</option>
-                                                <option value="2">Room 2</option>
-                                                <option value="3">Room 3</option>
+                                            <select class="form-select" id="select3" name="room_type_id">
+                                                @foreach( $roomTypes as $roomType)
+                                                    <option value="{{ $roomType->id }}">{{ $roomType->name ?? '' }}</option>
+                                                @endforeach
                                             </select>
-                                            <label for="select3">Select A Room</label>
+                                            <label for="select3">Chọn loại phòng</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                            <label for="message">Special Request</label>
+                                            <textarea class="form-control" placeholder="Ghi chú" id="message" name="note" style="height: 100px"></textarea>
+                                            <label for="message">Ghi chú</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Đặt phòng ngay</button>
                                     </div>
                                 </div>
                             </form>
@@ -172,10 +116,8 @@
                 <div class="col-lg-10 border rounded p-1">
                     <div class="border rounded text-center p-1">
                         <div class="bg-white rounded text-center p-5">
-                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
+                            <h4 class="mb-4"> <span class="text-primary text-uppercase"></span></h4>
                             <div class="position-relative mx-auto" style="max-width: 400px;">
-                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -187,4 +129,59 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+    <style>
+        .datetimepicker-input {
+            cursor: pointer;
+        }
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Khởi tạo DatePicker cho Checkin
+            const checkinPicker = new tempusDominus.TempusDominus(document.getElementById('checkin'), {
+                display: {
+                    components: {
+                        calendar: true,
+                        date: true,
+                        month: true,
+                        year: true,
+                        hours: true,
+                        minutes: true,
+                        seconds: false,
+                        useTwentyfourHour: true,
+                    },
+                },
+                defaultDate: null, // Đặt giá trị mặc định là null
+            });
+
+            // Khởi tạo DatePicker cho Checkout
+            const checkoutPicker = new tempusDominus.TempusDominus(document.getElementById('checkout'), {
+                display: {
+                    components: {
+                        calendar: true,
+                        date: true,
+                        month: true,
+                        year: true,
+                        hours: true,
+                        minutes: true,
+                        seconds: false,
+                        useTwentyfourHour: true,
+                    },
+                },
+                defaultDate: null, // Đặt giá trị mặc định là null
+            });
+
+            // Ràng buộc ngày Check Out phải sau Check In
+            document.getElementById('checkin').addEventListener('change', function (e) {
+                const checkinDate = new Date(e.target.value);
+                checkoutPicker.updateOptions({
+                    restrictions: {
+                        minDate: checkinDate,
+                    },
+                });
+            });
+        });
+
+
+    </script>
 @endsection

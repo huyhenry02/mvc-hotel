@@ -4,7 +4,7 @@
         <div class="logo-header">
             <a href="#" class="logo">
                 <img
-                    src="/assets/img/kaiadmin/logo (537 x 80 px) (537 x 80 px).png"
+                    src="/assets/img/kaiadmin/logo_dark.svg"
                     alt="navbar brand"
                     class="navbar-brand"
                     height="20"
@@ -78,7 +78,7 @@
                         </div>
                         <span class="profile-username">
                       <span class="op-7">Hi,</span>
-                      <span class="fw-bold">{{ auth()->user()->name ?? '' }}</span>
+                      <span class="fw-bold">{{ auth()->user()->full_name ?? '' }}</span>
                     </span>
                     </a>
                     <ul class="dropdown-menu dropdown-user animated fadeIn">
@@ -105,7 +105,7 @@
                             </li>
                             <li>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="">Logout</a>
+                                <a class="dropdown-item" href="{{ route('customer.postLogout') }}">Logout</a>
                             </li>
                         </div>
                     </ul>

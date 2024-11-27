@@ -21,6 +21,7 @@
                                 <th class="d-none d-xl-table-cell">Stt</th>
                                 <th class="d-none d-xl-table-cell">Tên Loại Phòng</th>
                                 <th class="d-none d-xl-table-cell">Mô Tả</th>
+                                <th class="d-none d-xl-table-cell">Giá</th>
                                 <th class="d-none d-xl-table-cell">Chức Năng</th>
                             </tr>
                        </thead>
@@ -28,8 +29,10 @@
                             @foreach($roomTypes as $key => $room_type)
                                 <tr class="text-center">
                                     <td class="d-none d-xl-table-cell">{{ $key + 1 }}</td>
-                                    <td class="d-none d-xl-table-cell">{{ $room_type->name}}</td>
-                                    <td class="d-none d-xl-table-cell">{{ $room_type->description}}</td>
+                                    <td class="d-none d-xl-table-cell">{{ $room_type->name ?? ''}}</td>
+                                    <td class="d-none d-xl-table-cell">{{ $room_type->description ?? ''}}</td>
+                                    <td class="d-none d-xl-table-cell">
+                                        {{number_format($room_type->price, 0, ',', '.')}} VNĐ</td>
                                     <td class="d-none d-xl-table-cell">
                                         <a href="{{route('room_type.showUpdate', $room_type->id)}}" class="btn btn-primary">
                                             <i class='bx bxs-edit'></i>

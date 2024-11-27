@@ -20,11 +20,6 @@
                                 <span class="sub-item">Danh sách khách hàng</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('user.showCreate') }}">
-                                <span class="sub-item">Thêm mới khách hàng</span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </li>
@@ -96,11 +91,6 @@
                         <li>
                             <a href="{{ route('booking.showIndex') }}">
                                 <span class="sub-item">Danh sách Đơn đặt phòng</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('booking.showCreate') }}">
-                                <span class="sub-item">Thêm mới Đơn đặt phòng</span>
                             </a>
                         </li>
                     </ul>

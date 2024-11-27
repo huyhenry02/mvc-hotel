@@ -29,13 +29,20 @@ return new class extends Migration
 
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
+            $table->string('code', 100)->nullable();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');
+            $table->foreignId('room_id')->nullable()->constrained('rooms')->onDelete('cascade');
+            $table->foreignId('room_type_id')->constrained('room_types')->onDelete('cascade');
+            $table->string('name_booking');
+            $table->string('email_booking');
+            $table->text('note')->nullable();
+            $table->integer('adult_people_number');
+            $table->integer('child_people_number');
             $table->date('check_in_date');
             $table->date('check_out_date');
-            $table->decimal('total_price', 10, 2);
+            $table->integer('total_price');
+            $table->enum('status', ['pending', 'approved', 'rejected', 'completed'])->default('pending');
             $table->enum('payment_status', ['pending', 'paid'])->default('pending');
-            $table->boolean('email_confirmed')->default(false);
             $table->timestamps();
         });
 

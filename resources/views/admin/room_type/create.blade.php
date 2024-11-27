@@ -19,6 +19,10 @@
                                <input type="text" name="name" id="name" placeholder="Tên Loại Phòng" class="form-control">
                            </div>
                            <div class="mb-3">
+                               <label for="price" class="form-label">Giá</label>
+                               <input type="number" name="price" id="price" placeholder="Giá" class="form-control">
+                           </div>
+                           <div class="mb-3">
                                <label for="description" class="form-label">Mô tả</label>
                                <textarea name="description" id="description"  rows="6" class="form-control" placeholder="Mô Tả"></textarea>
                            </div>
