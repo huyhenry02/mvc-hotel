@@ -11,7 +11,12 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
-
+    public const ROLE_ADMIN = "admin";
+    public const ROLE_CUSTOMER = "customer";
+    public const ARRAY_ROLE = [
+        self::ROLE_ADMIN => "Quản trị viên",
+        self::ROLE_CUSTOMER => "Khách Hàng"
+    ];
     /**
      * The attributes that are mass assignable.
      *

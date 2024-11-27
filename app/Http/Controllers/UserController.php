@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Contracts\View\Factory;
@@ -11,7 +12,8 @@ class UserController extends Controller
 {
     public function showIndex(): View|Factory|Application
     {
-        return view('admin.user.index');
+        $users = User::all();
+        return view('admin.user.index',['users'=>$users]);
     }
 
     public function showCreate(): View|Factory|Application
@@ -19,8 +21,8 @@ class UserController extends Controller
         return view('admin.user.create');
     }
 
-    public function showUpdate(): View|Factory|Application
+    public function showUpdate(User $user): View|Factory|Application
     {
-        return view('admin.user.update');
+        return view('admin.user.update', ['user'=>$user]);
     }
 }

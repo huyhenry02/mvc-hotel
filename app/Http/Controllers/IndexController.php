@@ -37,4 +37,12 @@ class IndexController extends Controller
     {
         return view('customer.booking');
     }
+    public function showTeam(): View|Factory|Application
+    {
+        return view('customer.team');
+    }
+    public function showTestimonial(): View|Factory|Application
+    {
+        return view('customer.testimonial');
+    }
 }

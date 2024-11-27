@@ -21,7 +21,10 @@ Route::group([
     ], function () {
         Route::get('/index', [RoomController::class, 'showIndex'])->name('room.showIndex');
         Route::get('/create', [RoomController::class, 'showCreate'])->name('room.showCreate');
-        Route::get('/update', [RoomController::class, 'showUpdate'])->name('room.showUpdate');
+        Route::post('/', [RoomController::class, 'postCreate'])->name('room.showStore');
+        Route::get('/update/{room}', [RoomController::class, 'showUpdate'])->name('room.showUpdate');
+        Route::post('/save/{room}', [RoomController::class, 'postUpdate'])->name('room.showSave');
+        Route::get('/destroy/{room}', [RoomController::class, 'destroy'])->name('room.destroy');
     });
     Route::group([
         'prefix' => 'room_type'

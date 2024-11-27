@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Contracts\View\Factory;
@@ -11,7 +13,9 @@ class TransactionController extends Controller
 {
     public function showIndex(): View|Factory|Application
     {
-        return view('admin.transaction.index');
+        $transactions = Transaction::all();
+        return view('admin.transaction.index',
+            ['transactions' => $transactions]);
     }
 
     public function showCreate(): View|Factory|Application
@@ -19,8 +23,10 @@ class TransactionController extends Controller
         return view('admin.transaction.create');
     }
 
-    public function showUpdate(): View|Factory|Application
+    public function showUpdate($id): View|Factory|Application
     {
-        return view('admin.transaction.update');
+        $transaction = Transaction::with('booking')->findOrFail($id);
+        $bookings = Booking::all();
+        return view('admin.transaction.update', compact('transaction', 'bookings'));
     }
 }
