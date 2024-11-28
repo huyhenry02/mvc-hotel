@@ -82,6 +82,7 @@
                                                 data-room="{{ $booking->room->code ?? '' }}"
                                                 data-name-booking="{{ $booking->name_booking ?? '' }}"
                                                 data-email-booking="{{ $booking->email_booking ?? '' }}"
+                                                data-code="{{ $booking->code ?? '' }}"
                                                 data-note="{{ $booking->note ?? 'Không có ghi chú' }}"
                                         >
                                             Xem chi tiết
@@ -108,6 +109,10 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
+                            <div class="col-md-6">
+                                <h6>Mã đơn đặt phòng:</h6>
+                                <p id="modalCode">-</p>
+                            </div>
                             <div class="col-md-6">
                                 <h6>Loại phòng:</h6>
                                 <p id="modalRoomType">-</p>
@@ -198,6 +203,7 @@
                 const status = button.getAttribute('data-status');
                 const totalPrice = button.getAttribute('data-total-price');
                 const note = button.getAttribute('data-note');
+                const code = button.getAttribute('data-code');
 
                 // Cập nhật dữ liệu vào modal
                 document.getElementById('modalRoomType').textContent = roomType;
@@ -211,6 +217,7 @@
                 document.getElementById('modalStatus').textContent = status;
                 document.getElementById('modalTotalPrice').textContent = totalPrice;
                 document.getElementById('modalNote').textContent = note;
+                document.getElementById('modalCode').textContent = code;
             });
         });
 

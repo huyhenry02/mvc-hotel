@@ -1,3 +1,4 @@
+@php use App\Models\Transaction; @endphp
 @extends('admin.layouts.main')
 @section('content')
     <div class="body-wrapper">
@@ -12,15 +13,16 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('transaction.showSave', $transaction->id)}}" method="post">
+                        <form action="{{route('transaction.postUpdate', $transaction->id)}}" method="post">
                             @csrf
                             <div class="mb-3">
                                 <label for="booking_id" class="form-label">Mã Đơn</label>
                                 <select name="booking_id" id="booking_id" class="form-select" required>
                                     <option value="" disabled selected>Select a Booking</option>
                                     @foreach($bookings as $booking)
-                                        <option value="{{ $booking->id }}" {{ $booking->id == $transaction->booking_id ? 'selected' : '' }}>
-                                            {{ $booking->id }}
+                                        <option
+                                            value="{{ $booking->id }}" {{ $booking->id == $transaction->booking_id ? 'selected' : '' }}>
+                                            {{ $booking->code }}
                                         </option>
                                     @endforeach
                                 </select>
@@ -41,13 +43,17 @@
                             </div>
                             <div class="mb-3">
                                 <label for="payment_date" class="form-label">Ngày Thanh Toán</label>
-                                <input type="date" name="payment_date" id="payment_date" {{$transaction->payment_date}} class="form-control">
+                                <input type="date" name="payment_date" id="payment_date"
+                                       value=" {{$transaction->payment_date}} " class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label for="transaction_status" class="form-label">
                                     Trạng Thái
                                 </label>
-                                <select name="transaction_status"  class="form-control">
+                                <select name="transaction_status" class="form-control">
+                                    <option value="{{ $transaction->transaction_status }}" selected>
+                                        {{ $transaction->transaction_status ? Transaction::ARRAY_STATUS[$transaction->transaction_status] : ''}}
+                                    </option>
                                     <option value="success">
                                         Thành Công
                                     </option>
@@ -61,7 +67,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="amount" class="form-label">Số Lượng</label>
-                                <input type="number"  name="amount" id="amount" {{$transaction->amount}} class="form-control">
+                                <input type="number" name="amount" id="amount" value="{{ $transaction->amount }}"
+                                       class="form-control">
                             </div>
                             <div style="float: right">
                                 <button type="submit" class="btn btn-primary">Tạo mới</button>

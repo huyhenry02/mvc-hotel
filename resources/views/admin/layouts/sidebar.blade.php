@@ -114,6 +114,11 @@
                                 <span class="sub-item">Danh sách hóa đơn</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('transaction.showCreate') }}">
+                                <span class="sub-item">Thêm mới hóa đơn</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>

@@ -14,7 +14,8 @@ Route::get('/', function () {
 })->name('admin.layouts.main');
 
 Route::group([
-    'prefix' => 'admin'
+    'prefix' => 'admin',
+    'middleware' => ['auth']
 ], function () {
     Route::group([
         'prefix' => 'room'
@@ -50,7 +51,11 @@ Route::group([
     ], function () {
         Route::get('/index', [TransactionController::class, 'showIndex'])->name('transaction.showIndex');
         Route::get('/create', [TransactionController::class, 'showCreate'])->name('transaction.showCreate');
-        Route::get('/update', [TransactionController::class, 'showUpdate'])->name('transaction.showUpdate');
+        Route::get('/update/{transaction}', [TransactionController::class, 'showUpdate'])->name('transaction.showUpdate');
+
+        Route::post('/create', [TransactionController::class, 'postCreate'])->name('transaction.postCreate');
+        Route::post('/update/{transaction}', [TransactionController::class, 'postUpdate'])->name('transaction.postUpdate');
+
     });
     Route::group([
         'prefix' => 'user'

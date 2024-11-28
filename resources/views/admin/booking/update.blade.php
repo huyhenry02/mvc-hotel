@@ -58,7 +58,7 @@
                             <div class="mb-3">
                                 <label for="room_id" class="form-label">Phòng</label>
                                 <select name="room_id" id="room_id" class="form-control">
-                                    <option value="{{ $booking->room_id ?? '' }}" selected>{{ $booking->room_id ?? 'Chọn phòng' }}</option>
+                                    <option value="{{ $booking->room_id ?? '' }}" selected>{{ $booking->room->code ?? 'Chọn phòng' }}</option>
                                     @foreach( $rooms as $room )
                                         <option value="{{ $room->id }}">
                                             {{ $room->code }}

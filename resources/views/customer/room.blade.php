@@ -50,8 +50,6 @@
                                     </div>
                                     <p class="text-body mb-3">{{ $roomType->description ?? '' }}</p>
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Xem chi tiết</a>
-                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Đặt ngay</a>
                                     </div>
                                 </div>
                             </div>

@@ -16,6 +16,7 @@ class Booking extends Model
         self::STATUS_PAID => "Đã Thanh Toán"
     ];
     protected $fillable = [
+        'code',
         'name_booking',
         'email_booking',
         'user_id',

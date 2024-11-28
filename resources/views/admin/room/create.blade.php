@@ -28,6 +28,11 @@
                                 <label for="floor" class="form-label">Tầng</label>
                                 <input type="number" name="floor" id="floor" placeholder="Tầng" class="form-control">
                             </div>
+
+                            <div class="mb-3">
+                                <label for="code" class="form-label">Mã phòng</label>
+                                <input type="text" name="code" id="code" placeholder="Mã phòng" class="form-control">
+                            </div>
                             <div style="float: right">
                                 <button type="submit" class="btn btn-primary">Tạo mới</button>
                                 <a href="{{route('room.showIndex')}}" class="btn btn-danger">Hủy</a>
